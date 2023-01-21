@@ -1,6 +1,6 @@
 # Hospital Management System | ASP.NET Core | EF Core 🏥
 
-Hospital Management System is a complete and multi-functional hospital or medical center management system, build using ASP.NET Core.
+Hospital Management System is a complete and multi-functional hospital or medical center management system, build using ASP.NET Core.🩺
 
 - Hospital Management Systen for Asp.Net Core MVC with Entity Framework using Microsoft SQL Server
 - Written by Ilker Satur 👨‍💻
@@ -10,7 +10,7 @@ Hospital Management System is a complete and multi-functional hospital or medica
 
 <h4>&nbsp &nbsp &nbsp The system can provide an automated way of managing any hospital activities rather than a traditional system. Moreover, this system can operate regular hospital activities like inpatient, outpatient, billing, test, bed management, account sector, etc. accurately and efficiently. Also, it helps to generate the daily, weekly, monthly, half-yearly, and yearly reports of sales, revenue, patients, lab test, bed management, etc. as your requirement easily. To see these reports, you need to click on some options.🚑
 <br><br>
-&nbsp &nbsp &nbsp The most important thing is that an admin can observe everyone through the software. An internal messaging platform helps employees to communicate with each other as well. All in all, clinic management software helps you to be with trends, and it also gives you the chance to run your business administration digitally and very efficiently.</h4>🩺
+&nbsp &nbsp &nbsp The most important thing is that an admin can observe everyone through the software. An internal messaging platform helps employees to communicate with each other as well. All in all, clinic management software helps you to be with trends, and it also gives you the chance to run your business administration digitally and very efficiently.</h4>
 
 <img src="https://github.com/ilkersatur/Hospital-Information-System/blob/main/Web%20yakalama_21-1-2023_22532_localhost.jpeg?raw=true">
 
