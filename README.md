@@ -37,3 +37,5 @@ Microsoft Visual Studio Community 2022 or later, ASP.NET Core 3.1, Identity Core
 
 <img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/img%20(1).jpeg?raw=true'>
 <img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/img%20(3).jpeg?raw=true'>
+
+# ⚠️⚠️ Still under development ⚠️⚠️ 
