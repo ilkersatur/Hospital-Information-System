@@ -12,7 +12,7 @@ Hospital Management System is a complete and multi-functional hospital or medica
 <br><br>
 &nbsp &nbsp &nbsp The most important thing is that an admin can observe everyone through the software. An internal messaging platform helps employees to communicate with each other as well. All in all, clinic management software helps you to be with trends, and it also gives you the chance to run your business administration digitally and very efficiently.</h4>
 
-<img src="https://github.com/ilkersatur/Hospital-Information-System/blob/main/img%20(4).jpeg?raw=true">
+<img src="https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(1).jpeg?raw=true">
 
 # Major Features
 
@@ -31,11 +31,12 @@ Hospital Management System is a complete and multi-functional hospital or medica
 
 Microsoft Visual Studio Community 2022 or later, ASP.NET Core 3.1, Identity Core, Entity Framework Code First, MSSQL SERVER 2017, JavaScript, bootstrap 4, HTML and CSS
 
-<img src="https://github.com/ilkersatur/Hospital-Information-System/blob/main/img%20(2).jpeg?raw=true">
+<img src="https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(5).jpeg?raw=true">
 
 # Screenshots Admin and User Panel 🎞
 
-<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/img%20(1).jpeg?raw=true'>
-<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/img%20(3).jpeg?raw=true'>
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(3).jpeg?raw=true'>
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(4).jpeg?raw=true'>
 
 # ⚠️⚠️ Still under development ⚠️⚠️ 
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(2).jpeg?raw=true'>
