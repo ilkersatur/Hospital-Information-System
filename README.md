@@ -35,8 +35,12 @@ Microsoft Visual Studio Community 2022 or later, ASP.NET Core 3.1, Identity Core
 
 # Screenshots Admin and User Panel 🎞
 
-<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(3).jpeg?raw=true'>
-<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(4).jpeg?raw=true'>
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/Image/a%20(3).jpeg?raw=true'>
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/Image/a%20(4).jpeg?raw=true'>
 
 # ⚠️⚠️ Still under development ⚠️⚠️ 
-<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/1%20(2).jpeg?raw=true'>
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/Image/a%20(2).jpeg?raw=true'>
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/Image/a%20(1).jpeg?raw=true'>
+
+# Login Page 
+<img src='https://github.com/ilkersatur/Hospital-Information-System/blob/main/Image/a%20(5).jpeg?raw=true'>
