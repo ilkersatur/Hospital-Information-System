@@ -1,0 +1,49 @@
+﻿@model WebApp.Models.RandevuTanimi
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RandevuTanimi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RandevuTanimiID" />
+            <div class="form-group">
+                <label asp-for="PoliklinikID" class="control-label"></label>
+                <select asp-for="PoliklinikID" class="form-control" asp-items="ViewBag.PoliklinikID"></select>
+                <span asp-validation-for="PoliklinikID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GunID" class="control-label"></label>
+                <select asp-for="GunID" class="form-control" asp-items="ViewBag.GunID"></select>
+                <span asp-validation-for="GunID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaatID" class="control-label"></label>
+                <select asp-for="SaatID" class="form-control" asp-items="ViewBag.SaatID"></select>
+                <span asp-validation-for="SaatID" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RandevuDurumu" /> @Html.DisplayNameFor(model => model.RandevuDurumu)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

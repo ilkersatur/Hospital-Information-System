@@ -1,0 +1,73 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#galeri {
+    width:80%;
+    height:700px;
+    /*background-color:lightgray;*/
+    display:flex;
+    justify-content:space-evenly;
+    align-content:space-evenly;
+}
+
+#galeri .kitap{
+    width: 200px;
+    height: 300px;
+    background-color: lightgray;
+    border:1px solid gray;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+    #galeri .kitap:hover {
+        border:1px solid black;
+     
+    }
+#galeri img {
+     /*  margin-left:auto;
+       margin-right:auto;*/
+        width: 80%;
+        height:60%;
+        /*height: 200px;*/
+       
+}
+
+#galeri h5 {
+        color:#333;
+        /*height: 200px;*/
+}
+    #galeri a {
+      text-decoration:none;
+    }
+
+    #galeri .puan {
+       width:160px;
+       height:32px;
+       display:flex;
+    }
+
+    #galeri .puan img{
+        width: 32px;
+        height: 32px;
+    }
+    #galeri .sepet {
+        color:dodgerblue;
+
+    }

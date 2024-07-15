@@ -1,0 +1,140 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model WebApp.Models.Kitap
+@inject SignInManager<Uye> SignInManager
+
+@{
+    ViewData["Title"] = "Detay";
+}
+
+<h1>Detay</h1>
+
+<div>
+    <h4>Kitap</h4>
+    <hr />
+    <table>
+        <tr>
+            <td width="350px">
+                <img src="~/KapakResimleri/@Model.KapakResmi" />
+            </td>
+            <td>
+       
+        
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KitapAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KitapAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ArkaKapakYazisi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ArkaKapakYazisi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KapakResmi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KapakResmi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Onerilen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Onerilen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OduncVerildi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OduncVerildi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StokAdedi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StokAdedi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrtalamaPuan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrtalamaPuan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EklendigiTarih)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EklendigiTarih)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yazar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yazar.YazarAdi)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Kategoriler)
+        </dt>
+        <dd class="col-sm-10">
+            <ul>
+            @foreach(Kitap_Kategori kat in ViewBag.kategoriler)
+            {
+                    <li>@kat.Kategori.KategoriAdi</li>
+                }
+            </ul>
+            
+        </dd>
+                    @*Sepete Ekle*@
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <dt class="col-sm-2">
+
+                        </dt>
+                        <dd class="col-sm-10">
+                            <a asp-action="SepeteEkle" asp-controller="Uye" asp-area="UyePanel" asp-route-id="@Model.KitapID" >Sepete Ekle</a>
+                        </dd>
+                    }
+
+    </dl>
+            </td>
+        </tr>
+    </table>
+</div>
+
+@*Yorum Ekleme*@
+<div>
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-action = "YorumEkle" asp-controller = "Uye" asp-area="UyePanel" >
+        <textarea name = "mesaj" cols = "80" rows = "3" ></textarea>
+       <input type = "hidden" name="kitapID" value = "@Model.KitapID" />
+       <input type = "submit" value = "Yorum Gönder" />
+    </form>
+ }
+ </div>
+ <table>
+    @foreach (var yorum in (ICollection<Yorum>)ViewBag.yorumlar)
+    {
+        <tr>
+            <td><b>@yorum.Uye.Ad @yorum.Uye.Soyad</b></td>
+            <td>@yorum.Mesaj</td>
+            <td>@yorum.YorumTarih</td>
+
+        </tr>
+    }
+</table>
+
+
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model?.KitapID">Edit</a> |*@
+    <a asp-action="Index">Back to List</a>
+</div>

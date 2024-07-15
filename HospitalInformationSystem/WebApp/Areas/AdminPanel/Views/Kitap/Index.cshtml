@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebApp.Models.Kitap>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KapakResmi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KitapAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.ArkaKapakYazisi)
+            </th>*@
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Onerilen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OduncVerildi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StokAdedi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrtalamaPuan)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.EklendigiTarih)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Yazar)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @*@Html.DisplayFor(modelItem =>item.KapakResmi)*@
+                    <img src="/KapakResimleri/@item.KapakResmi" width="50px" height="70px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KitapAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fiyat)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ArkaKapakYazisi)
+            </td>*@
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Onerilen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OduncVerildi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StokAdedi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrtalamaPuan)
+            </td>
+          @*  <td>
+                @Html.DisplayFor(modelItem => item.EklendigiTarih)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Yazar.YazarAdi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KitapID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KitapID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.KitapID">Delete</a>|
+                    <a asp-action="KategoriEkle" asp-route-id="@item.KitapID">Kategori Ekle</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

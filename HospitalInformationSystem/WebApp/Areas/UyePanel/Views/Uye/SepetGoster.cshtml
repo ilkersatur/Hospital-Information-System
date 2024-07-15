@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Sepet>
+
+<form asp-action="SatinAl" method="post">
+<table class="table">
+    @foreach(Sepet sepet in @Model)
+    {
+    <tr>
+        <td>@sepet.Kitap.KitapAdi</td>
+        <td><input type="number" min="1" name="Adet_@sepet.KitapID" value="@sepet.Adet" /></td>
+    </tr>
+   
+    }
+        <tr>
+            <td></td>
+            <td><input type="submit" value="SATIN AL" /></td>
+        </tr>
+</table>
+</form>
+
+<div asp-validation-summary="All"></div>
+@if(TempData["STOK"]!=null)
+{
+   <div>@TempData["STOK"]</div>
+}

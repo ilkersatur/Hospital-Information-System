@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<Kitap>
+@inject SignInManager<Uye> SignInManager
+
+<h1>Tüm Kitaplar</h1>
+
+<div id="galeri">
+@foreach(Kitap kitap in Model)
+{   
+        <a asp-action="Detay" asp-route-id="@kitap.KitapID">
+   <div class="kitap">
+            
+       <img src="~/KapakResimleri/@kitap.KapakResmi" >
+       <h5>@kitap.KitapAdi</h5>
+       <b>@kitap.Fiyat</b>
+
+                @*<a class="sepet">Sepete Ekle</a>*@
+
+       <div class="puan">
+                    @{
+                        double kalan = kitap.OrtalamaPuan - Math.Truncate(kitap.OrtalamaPuan); 
+             }
+                    @{
+                        for (int i = 0; i<Math.Floor(@kitap.OrtalamaPuan); i++)
+                        {
+                            <img src="~/KapakResimleri/tam.png" />
+                        }
+                        if (kalan > 0 && kalan < 0.5)
+                        {
+                            <img src="~/KapakResimleri/yarim.png" />
+                        }
+                        if (kalan >= 0.5)
+                        {
+                            <img src="~/KapakResimleri/tam.png" />
+                        }
+                    }
+
+                </div>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a asp-action="SepeteEkle" asp-controller="Uye" asp-area="UyePanel" asp-route-id="@kitap.KitapID">Sepete Ekle</a>
+                }
+   </div>
+  </a>
+
+
+}
+</div>

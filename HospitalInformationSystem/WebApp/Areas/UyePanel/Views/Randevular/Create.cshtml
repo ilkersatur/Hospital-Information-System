@@ -1,0 +1,111 @@
+﻿@model WebApp.Models.Randevu
+
+@{
+    ViewData["Title"] = "Create";
+}
+<script>
+    function changeFormState(_form)
+    {
+        //let frm= document.getElementById("frm");
+        _form.form.method ="GET";
+        _form.form.submit();
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>MEDINOVA - Hospital Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free HTML Templates" name="keywords">
+        <meta content="Free HTML Templates" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Appointment Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="mb-4">
+                            <h1 class="d-inline-block text-primary text-uppercase border-bottom border-5">Randevu Oluştur</h1>
+                                <h1 class="display-4">Kendiniz ve Aileniz İçin Randevu Alın</h1>
+                        </div>
+                        <p class="mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-light text-center rounded p-5">
+                                <h1 class="mb-4">@ViewBag.gun Gününe Ait Randevular</h1>
+                            <form asp-action="Create" method="post" id="frm">
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                    <label asp-for="RandevuTanimiID" class="control-label">Randevu Saatleri</label>
+                    <select asp-for="RandevuTanimiID" class="form-control" asp-items="ViewBag.RandevuTanimiID"></select>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label  class="control-label">Poliklinikler</label>
+                                        <select name="id" class="form-control" asp-items="ViewBag.Poliklinikler" onchange="changeFormState(this)">
+                                        </select>
+                                    </div>
+                                  
+                                    <div class="col-12">
+                                           <input type="submit" value="Randevu Al" class="btn btn-primary" />
+                                    </div>
+                                        <div>
+        <a asp-action="Index">Randevularıma Geri Dön</a>
+    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Appointment End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+    </html>

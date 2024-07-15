@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebApp.Models.RandevuTanimi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RandevuDurumu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gun)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Saat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poliklinikler)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RandevuDurumu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gun.GunAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saat.RandevuSaati)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poliklinikler.PoliklinikAdi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RandevuTanimiID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RandevuTanimiID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RandevuTanimiID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
